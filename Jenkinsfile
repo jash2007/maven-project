@@ -12,7 +12,7 @@ jdk 'JDK'
                  sh 'mvn clean package checkstyle:checkstyle'
             }
             post {
-                sucess {
+                success {
                     echo "This is checkstyle line"
                     checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
                     echo "This is archive artifacts"
