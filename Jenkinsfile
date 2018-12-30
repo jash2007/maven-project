@@ -31,7 +31,11 @@ jdk 'JDK'
         }
         stage('Deploy') { 
             steps {
-                echo 'Deployl' 
+                timeout(3) {
+                             input 'Do you really want to proceed?'
+                            }       
+                                echo 'Deployment' 
+                                 build 'Job-Deploy'
             }
         }
     }
