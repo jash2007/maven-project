@@ -14,7 +14,7 @@ jdk 'JDK'
         stage('Test') { 
             steps {
                 echo 'Test' 
-                sh 'mvn clean package stylechecklist:stylechecklist'
+                sh 'mvn clean package checkstyle:checkstyle'
             }
         }
         stage('Deploy') { 
