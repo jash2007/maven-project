@@ -9,6 +9,7 @@ pipeline {
         stage('Test') { 
             steps {
                 echo 'Test' 
+                sh 'mvn clean package stylechecklist:stylechecklist'
             }
         }
         stage('Deploy') { 
